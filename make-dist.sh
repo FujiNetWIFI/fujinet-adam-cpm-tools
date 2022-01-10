@@ -24,6 +24,7 @@ $CP nmkdir/nmkdir.com 0:nmkdir.com
 $CP nput/nput.com 0:nput.com
 $CP npwd/npwd.com 0:npwd.com
 $CP nren/nren.com 0:nren.com
+$CP nsh/nsh.com 0:nsh.com
 $CP README.md 0:README.TXT
 set +x
 

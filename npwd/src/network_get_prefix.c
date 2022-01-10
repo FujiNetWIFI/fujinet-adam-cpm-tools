@@ -14,7 +14,6 @@ extern unsigned char response[1024];
 
 char *network_get_prefix(void)
 {
-  DCB *dcb = find_dcb();
   char c='0'; // 0x30 (PWD)
   unsigned char r=adamnet_write(&c,1);
 
