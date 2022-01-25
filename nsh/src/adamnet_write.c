@@ -1,5 +1,7 @@
+#include <stdio.h>
 #include "find_dcb.h"
 #include "dcb.h"
+#include "debug.h"
 
 /**
  * @brief Write to Network device
@@ -11,6 +13,9 @@ unsigned char adamnet_write(char *buf, unsigned short len)
 {
   DCB *dcb = find_dcb();
 
+  if (debug_enabled())
+    printf("\nADAMNET WRITE: %u BYTES INTO %p\n",len,buf);
+    
   while (1)
     {
       dcb->len = len;

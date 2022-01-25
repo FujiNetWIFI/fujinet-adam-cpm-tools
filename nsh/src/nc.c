@@ -22,6 +22,7 @@ unsigned char txbuf[64];
 
 #define READWRITE 12
 #define CONNECTED 2
+#define NO_TRANSLATION 0
 
 void in(void)
 {
@@ -62,7 +63,7 @@ void nc(char *s)
       input(s);
     }
 
-  if (network_open(s,12,0) != 0x80)
+  if (network_open(s,READWRITE,NO_TRANSLATION) != 0x80) // Testing to see if we're nulling the string.
     {
       printf("COULD NOT OPEN SOCKET\n");
       goto bye;

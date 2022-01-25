@@ -12,6 +12,7 @@
 const char *helptext=
   "CLS\tClear Screen\n"
   "CD\tChange N: Prefix\n"
+  "DEBUG\t1 = ON, 0 = OFF, enable debug output\n"
   "DIR\tShow Directory\n"
   "ERA\tErase file from N:\n"
   "EXIT\tBack to CP/M\n"

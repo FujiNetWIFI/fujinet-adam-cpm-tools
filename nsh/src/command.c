@@ -23,6 +23,7 @@
 #include "era.h"
 #include "login.h"
 #include "bye.h"
+#include "debug.h"
 
 extern char *pptr;
 
@@ -63,7 +64,8 @@ bool command(char *s, char *t)
     era(strtok(NULL," "));
   else if (!strcmp(t,"LOGIN"))
     login(strtok(NULL," "),strtok(NULL," "));
-
+  else if (!strcmp(t,"DEBUG"))
+    debug(atoi(strtok(NULL," ")));
   else
     return false;
 

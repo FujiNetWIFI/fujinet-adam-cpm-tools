@@ -26,5 +26,5 @@ void cd(char *s)
   if (s!=NULL)
     strncpy(&resp[1],s,256);
   
-  return adamnet_write(resp,strlen(resp));
+  adamnet_write(resp,strlen(resp));
 }

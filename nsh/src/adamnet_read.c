@@ -1,5 +1,7 @@
+#include <stdio.h>
 #include "find_dcb.h"
 #include "dcb.h"
+#include "debug.h"
 
 #define READ_MAX_LEN 1024
 
@@ -13,6 +15,9 @@ unsigned char adamnet_read(char *buf, unsigned short len)
 {
   DCB *dcb = find_dcb();
 
+  if (debug_enabled())
+    printf("\nADAMNET READ: %d BYTES INTO %p\n",len,buf);
+  
   while (1)
     {
       dcb->len = READ_MAX_LEN;
